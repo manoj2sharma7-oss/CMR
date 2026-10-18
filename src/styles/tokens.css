@@ -1,0 +1,64 @@
+/* Design tokens: change a value here and the whole game follows. */
+:root {
+  /* Premium light palette */
+  --ink: #1f2a44;
+  --ink-soft: #586788;
+  --paper: #fffdfb;
+  --cream: #fff7ee;
+  --sky: #ebf5ff;
+  --sky-deep: #7ac7ff;
+  --sun: #ffc857;
+  --tangerine: #ff7b54;
+  --mint: #60d7b3;
+  --mint-deep: #1fa678;
+  --bubblegum: #ff8ac2;
+  --grape: #6e6af7;
+  --grape-soft: #eef0ff;
+  --danger: #ff5d73;
+  --rose: #ffe3ee;
+  --aqua: #dff9f8;
+  --app-bg: linear-gradient(135deg, #edf8ff 0%, #f3f0ff 42%, #fff7ee 100%);
+  --panel-glass: rgba(255, 255, 255, 0.8);
+  --shadow-ink: rgba(31, 42, 68, 0.14);
+
+  /* Type */
+  --font-display: 'Fredoka', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Shape: chunky outlines + hard offset shadows give the "sticker" look */
+  --outline: 3px solid var(--ink);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --lift: 0 7px 0 var(--ink);
+  --lift-sm: 0 4px 0 var(--ink);
+
+  /* Spacing */
+  --gap: 16px;
+  --tap: 48px; /* minimum comfortable touch target */
+}
+
+.app[data-theme='dark'] {
+  --ink: #eaf2ff;
+  --ink-soft: #b2c2dc;
+  --paper: #101a29;
+  --cream: #162236;
+  --sky: #0a1020;
+  --sky-deep: #67b8ff;
+  --sun: #ffca5d;
+  --tangerine: #ff9d68;
+  --mint: #52d8b1;
+  --mint-deep: #1ebd93;
+  --bubblegum: #ff9ed1;
+  --grape: #8f86ff;
+  --grape-soft: #1e2441;
+  --danger: #ff6b7d;
+  --rose: #261d2c;
+  --aqua: #0f2a2f;
+  --app-bg: linear-gradient(135deg, #0b1220 0%, #101b2e 35%, #121c28 100%);
+  --panel-glass: rgba(12, 19, 31, 0.78);
+  --shadow-ink: rgba(3, 7, 18, 0.68);
+  --outline: 3px solid rgba(234, 242, 255, 0.92);
+  --lift: 0 7px 0 rgba(5, 10, 18, 0.9);
+  --lift-sm: 0 4px 0 rgba(5, 10, 18, 0.9);
+}
