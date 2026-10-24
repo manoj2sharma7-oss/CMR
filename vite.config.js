@@ -2,13 +2,20 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
-// The "@" alias points to /src, e.g. import { Maze } from '@/engine/maze'
+// Use a relative base so the app loads correctly from repo subpaths and
+// browser previews served outside the domain root.
 export default defineConfig({
   plugins: [react()],
-    // GitHub Pages serves this repository from /CMR/, not from the domain root.
-    // Keep local development at / while emitting the correct paths in CI builds.
-    base: process.env.GITHUB_ACTIONS ? '/CMR/' : '/',
+  base: './',
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 4173,
   },
 });
